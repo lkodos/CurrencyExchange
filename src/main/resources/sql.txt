@@ -1,0 +1,7 @@
+SELECT exchange_rate.id,
+        a.code,
+        b.code,
+        exchange_rate.rate
+FROM exchange_rate
+        JOIN currency a ON a.id = exchange_rate.base_currency_id
+        JOIN currency b ON b.id = exchange_rate.target_currency_id;
